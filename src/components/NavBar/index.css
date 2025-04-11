@@ -1,82 +1,60 @@
-/* Write your code here. */
+.nav-bar-container {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff33;
+  padding: 8px;
+}
 
-.nav-container {
+.title-with-score-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #ffffff30;
-  border: solid 1px #ffffff33;
+  flex-basis: 80%;
+  max-width: 1000px;
 }
-.logo-name {
+
+.logo-and-title-container {
   display: flex;
   align-items: center;
-  margin-left: 20px;
 }
+
+.emoji-logo {
+  width: 24px;
+}
+
 @media screen and (min-width: 768px) {
-  .logo-name {
-    margin-left: 50px;
+  .emoji-logo {
+    width: 48px;
   }
 }
-.logo {
-  height: 30px;
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    height: 50px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .nav-container {
-    height: 80px;
-  }
-}
-.ligo-heading {
-  font-family: Roboto;
-  font-size: 20px;
+
+.title {
   color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: bold;
 }
+
 @media screen and (min-width: 768px) {
-  .ligo-heading {
-    font-size: 40px;
+  .title {
+    font-size: 24px;
   }
 }
-.score {
+
+.scores-container {
   display: flex;
-  justify-content: flex-end;
-  width: 50%;
-  margin-right: 20px;
 }
+
+.score {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
 @media screen and (min-width: 768px) {
   .score {
-    margin-right: 50px;
+    font-size: 24px;
+    margin-left: 32px;
   }
-}
-.show-score {
-  font-family: Roboto;
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 500;
-  margin-right: 50px;
-}
-@media screen and (max-width: 768px) {
-  .show-score {
-    font-size: 16px;
-    margin-right: 15px;
-  }
-}
-.show-topscore {
-  font-family: Roboto;
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 500;
-  margin-right: 50px;
-}
-@media screen and (max-width: 768px) {
-  .show-topscore {
-    margin-right: 20px;
-    font-size: 16px;
-  }
-}
-.hide {
-  display: none;
 }

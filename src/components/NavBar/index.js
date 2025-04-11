@@ -1,25 +1,25 @@
-// Write your code here.
-
 import './index.css'
 
 const NavBar = props => {
-  const {score, topScore, show} = props
-
-  const display = show ? 'hide' : null
+  const {currentScore, isGameInProgress, topScore} = props
 
   return (
-    <nav className="nav-container">
-      <div className="logo-name">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
-          alt="emoji logo"
-          className="logo"
-        />
-        <h1 className="ligo-heading">Emoji Game</h1>
-      </div>
-      <div className={`score ${display}`}>
-        <p className="show-score">Score: {score}</p>
-        <p className="show-topscore">Top Score: {topScore}</p>
+    <nav className="nav-bar-container">
+      <div className="title-with-score-container">
+        <div className="logo-and-title-container">
+          <img
+            className="emoji-logo"
+            src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
+            alt="emoji logo"
+          />
+          <h1 className="title">Emoji Game</h1>
+        </div>
+        {isGameInProgress && (
+          <div className="scores-container">
+            <p className="score">Score: {currentScore}</p>
+            <p className="score">Top Score: {topScore}</p>
+          </div>
+        )}
       </div>
     </nav>
   )
